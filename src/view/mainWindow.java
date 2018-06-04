@@ -1,16 +1,13 @@
 package view;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Toolkit;
-import java.awt.event.KeyAdapter;
+
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
 import javax.swing.*;
-import javax.swing.border.Border;
+
 
 import controller.controller;
 import model.Game;
@@ -21,8 +18,11 @@ import model.brick;
 
 public class mainWindow extends JFrame implements GameObserver{
 		
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Game _game;
-	private controller _control;
 	private int direction;
 	private BallsWorker _ballsworker;
 	private int _Score;
@@ -30,7 +30,7 @@ public class mainWindow extends JFrame implements GameObserver{
 
 	
 	public mainWindow(Game game, controller control){
-		_control = control;
+	
 		_game = game;
 		_Score = 0;
 		
@@ -54,8 +54,6 @@ public class mainWindow extends JFrame implements GameObserver{
 		upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.X_AXIS));
 		centerPanel.add(upperPanel);
 		
-		Border b = BorderFactory.createLineBorder(Color.BLACK, 2);
-
 		
 		GameInterface _b = new GameInterface(_game);
 		centerPanel.add(_b);
@@ -67,9 +65,6 @@ public class mainWindow extends JFrame implements GameObserver{
 		ScoreLabel.setText(" " + _Score);
 		upperPanel.add(ScoreLabel);
 		
-	
-		
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int height = (int) (500);
 		int width = (int) (400);
 		setPreferredSize(new Dimension(width, height));

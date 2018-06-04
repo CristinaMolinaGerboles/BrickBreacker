@@ -1,9 +1,8 @@
 package model;
 
-import java.awt.Dimension;
+
 import java.awt.Rectangle;
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
+
 
 public class bar {
 	
@@ -15,7 +14,7 @@ public class bar {
 	
 	public bar(Game game){
 		_game = game;
-		_y = 442;
+		_y = 435;
 		_x = 0;
 		barWidth = 150;
 		//_y = _game.getWidth();

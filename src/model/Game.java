@@ -4,9 +4,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Game.GameObserver;
 
-@SuppressWarnings("serial")
 public class Game {
 
 	private static final int MINWIDTH = 380;
@@ -98,6 +96,9 @@ public class Game {
 	}
 	public bar getBar() {
 		return _bar;
+	}
+	public void setBrick(brick Brick) {
+		_brick = Brick;
 	}
 	public ball getBall() {
 		return _ball;

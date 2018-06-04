@@ -8,20 +8,19 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+
 
 import controller.controller;
 import model.Game;
 
+@SuppressWarnings("serial")
 public class buttons extends JPanel{
 	//modelo
 	private Game _game;
-	private controller _control;
+	
 	
 	public buttons(Game game, controller control) {
 		_game = game;
-		_control = control;
 		initGUI();
 	}
 	void initGUI() {

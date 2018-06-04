@@ -3,10 +3,7 @@ package view;
 import java.awt.Graphics;
 
 import java.awt.Graphics2D;
-import java.util.List;
 
-import view.*;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -16,16 +13,15 @@ import model.ball;
 import model.bar;
 import model.brick;
 
+@SuppressWarnings("serial")
 public class GameInterface extends JPanel implements GameObserver{
 
 	private Game _game;
 	private ballInterface _ball;
 	private brickInterface _brick;
-	private ball _Ball;
-	private bar _Bar;
+	
 	private barInterface _bar;
-	private mainWindow main;
-	private brick _Brick;
+
 
 	
 
@@ -85,9 +81,9 @@ public class GameInterface extends JPanel implements GameObserver{
 	@Override
 	public void move(bar Bar, ball Ball, brick Brick) {
 		// TODO Auto-generated method stub
-		_Ball = Ball;
-		_Bar = Bar;
-		_Brick = Brick;
+		_game.setBall(Ball); 
+		_game.setBar(Bar);;
+		_game.setBrick(Brick);;
 		repaint();
 	}
 

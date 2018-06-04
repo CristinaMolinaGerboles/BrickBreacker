@@ -3,9 +3,7 @@ package view;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.util.List;
 
-import javax.swing.JComponent;
 
 import model.Game;
 import model.Game.GameObserver;
@@ -17,7 +15,7 @@ import model.brick;
 public class brickInterface  implements GameObserver {
 	
 	private Game _game;
-	private brick _brick;
+
 
 	public brickInterface(Game game) {
 		_game = game;
